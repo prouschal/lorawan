@@ -76,6 +76,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 				9:  {Modulation: LRFHSSModulation, CodingRate: "4/6", OccupiedChannelWidth: 137000, uplink: true, downlink: false},
 				10: {Modulation: LRFHSSModulation, CodingRate: "1/3", OccupiedChannelWidth: 336000, uplink: true, downlink: false},
 				11: {Modulation: LRFHSSModulation, CodingRate: "4/6", OccupiedChannelWidth: 336000, uplink: true, downlink: false},
+				12: {Modulation: FSKModulation, BitRate: 200000, uplink: true, downlink: true},
 			},
 			rx1DataRateTable: map[int][]int{
 				0:  {0, 0, 0, 0, 0, 0},
@@ -90,6 +91,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 				9:  {2, 1, 0, 0, 0, 0},
 				10: {1, 0, 0, 0, 0, 0},
 				11: {2, 1, 0, 0, 0, 0},
+				12: {12, 6, 5, 4, 3, 2},
 			},
 			txPowerOffsets: []int{
 				0,
@@ -126,6 +128,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 230, N: 222},
 					6: {M: 230, N: 222},
 					7: {M: 230, N: 222},
+					12: {M: 230, N: 222},
 				},
 			},
 			LoRaWAN_1_0_1: map[string]map[int]MaxPayloadSize{
@@ -138,6 +141,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 230, N: 222},
 					6: {M: 230, N: 222},
 					7: {M: 230, N: 222},
+					12: {M: 230, N: 222},
 				},
 			},
 			LoRaWAN_1_0_2: map[string]map[int]MaxPayloadSize{
@@ -150,6 +154,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 230, N: 222},
 					6: {M: 230, N: 222},
 					7: {M: 230, N: 222},
+					12: {M: 230, N: 222},
 				},
 			},
 			LoRaWAN_1_0_3: map[string]map[int]MaxPayloadSize{
@@ -162,6 +167,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 230, N: 222},
 					6: {M: 230, N: 222},
 					7: {M: 230, N: 222},
+					12: {M: 230, N: 222},
 				},
 			},
 			LoRaWAN_1_1_0: map[string]map[int]MaxPayloadSize{
@@ -174,6 +180,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 230, N: 222},
 					6: {M: 230, N: 222},
 					7: {M: 230, N: 222},
+					12: {M: 230, N: 222},
 				},
 			},
 			latest: map[string]map[int]MaxPayloadSize{
@@ -186,6 +193,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 230, N: 222},
 					6: {M: 230, N: 222},
 					7: {M: 230, N: 222},
+					12: {M: 230, N: 222},
 				},
 				RegParamRevRP002_1_0_1: map[int]MaxPayloadSize{
 					0: {M: 59, N: 51},
@@ -196,6 +204,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 230, N: 222},
 					6: {M: 230, N: 222},
 					7: {M: 230, N: 222},
+					12: {M: 230, N: 222},
 				},
 				latest: map[int]MaxPayloadSize{ // RP002-1.0.2, RP002-1.0.3
 					0:  {M: 59, N: 51},
@@ -210,6 +219,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					9:  {M: 123, N: 115},
 					10: {M: 58, N: 50},
 					11: {M: 123, N: 115},
+					12: {M: 230, N: 222},
 				},
 			},
 		}
@@ -225,6 +235,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 250, N: 242},
 					6: {M: 250, N: 242},
 					7: {M: 250, N: 242},
+					12: {M: 250, N: 242},
 				},
 			},
 			LoRaWAN_1_0_1: map[string]map[int]MaxPayloadSize{
@@ -237,6 +248,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 250, N: 242},
 					6: {M: 250, N: 242},
 					7: {M: 250, N: 242},
+					12: {M: 250, N: 242},
 				},
 			},
 			LoRaWAN_1_0_2: map[string]map[int]MaxPayloadSize{
@@ -249,6 +261,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 250, N: 242},
 					6: {M: 250, N: 242},
 					7: {M: 250, N: 242},
+					12: {M: 250, N: 242},
 				},
 			},
 			LoRaWAN_1_0_3: map[string]map[int]MaxPayloadSize{
@@ -261,6 +274,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 250, N: 242},
 					6: {M: 250, N: 242},
 					7: {M: 250, N: 242},
+					12: {M: 250, N: 242},
 				},
 			},
 			latest: map[string]map[int]MaxPayloadSize{
@@ -273,6 +287,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 250, N: 242},
 					6: {M: 250, N: 242},
 					7: {M: 250, N: 242},
+					12: {M: 250, N: 242},
 				},
 				RegParamRevRP002_1_0_1: map[int]MaxPayloadSize{
 					0: {M: 59, N: 51},
@@ -283,6 +298,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					5: {M: 250, N: 242},
 					6: {M: 250, N: 242},
 					7: {M: 250, N: 242},
+					12: {M: 250, N: 242},
 				},
 				latest: map[int]MaxPayloadSize{ // RP002-1.0.2, RP002-1.0.3
 					0:  {M: 59, N: 51},
@@ -297,6 +313,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 					9:  {M: 123, N: 115},
 					10: {M: 58, N: 50},
 					11: {M: 123, N: 115},
+					12: {M: 250, N: 242},
 				},
 			},
 		}

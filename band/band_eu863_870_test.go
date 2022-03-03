@@ -76,7 +76,7 @@ func TestEU863Band(t *testing.T) {
 			So(f, ShouldEqual, 868500000)
 		})
 
-		Convey("Then GetDataRateIndex returns the exepected values", func() {
+		Convey("Then GetDataRateIndex returns the expected values", func() {
 			tests := []struct {
 				DataRate   DataRate
 				Uplink     bool
@@ -121,6 +121,16 @@ func TestEU863Band(t *testing.T) {
 					DataRate:   DataRate{Modulation: LRFHSSModulation, CodingRate: "4/6", OccupiedChannelWidth: 336000},
 					Uplink:     true,
 					ExpectedDR: 11,
+				},
+				{
+					DataRate:   DataRate{Modulation: FSKModulation, BitRate:50000},
+					Uplink:     true,
+					ExpectedDR: 7,
+				},
+				{
+					DataRate:   DataRate{Modulation: FSKModulation, BitRate:200000},
+					Uplink:     true,
+					ExpectedDR: 12,
 				},
 			}
 
