@@ -91,7 +91,7 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 				9:  {2, 1, 0, 0, 0, 0},
 				10: {1, 0, 0, 0, 0, 0},
 				11: {2, 1, 0, 0, 0, 0},
-				12: {12, 6, 5, 4, 3, 2},
+				12: {5, 5, 5, 4, 3, 2},
 			},
 			txPowerOffsets: []int{
 				0,
@@ -107,11 +107,13 @@ func newEU863Band(repeatedCompatible bool) (Band, error) {
 				{Frequency: 868100000, MinDR: 0, MaxDR: 5, enabled: true},
 				{Frequency: 868300000, MinDR: 0, MaxDR: 5, enabled: true},
 				{Frequency: 868500000, MinDR: 0, MaxDR: 5, enabled: true},
+				{Frequency: 868800000, MinDR: 12, MaxDR: 12, enabled: true},
 			},
 			downlinkChannels: []Channel{
 				{Frequency: 868100000, MinDR: 0, MaxDR: 5, enabled: true},
 				{Frequency: 868300000, MinDR: 0, MaxDR: 5, enabled: true},
 				{Frequency: 868500000, MinDR: 0, MaxDR: 5, enabled: true},
+				{Frequency: 868800000, MinDR: 12, MaxDR: 12, enabled: true},
 			},
 		},
 	}
